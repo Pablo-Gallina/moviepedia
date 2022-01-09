@@ -1,0 +1,4 @@
+@api = https://api.themoviedb.org/3/movie
+@key = d1995f9cb803e3952498564c2eee810a
+### GET
+GET https://api.themoviedb.org/3/movie/top_rated?api_key={{key}}&language=es-ES&page=1
