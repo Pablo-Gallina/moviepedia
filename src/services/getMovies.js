@@ -1,7 +1,7 @@
 const apiKey = 'd1995f9cb803e3952498564c2eee810a'
 
-export default function getMovies ({ keywords = 'top_rated' } = {}) {
-    const apiURL = `https://api.themoviedb.org/3/movie/${keywords}?api_key=${apiKey}&language=es-ES&page=1`;
+export default function getMovies ({ keyword = 'top_rated' } = {}) {
+    const apiURL = `https://api.themoviedb.org/3/movie/${keyword}?api_key=${apiKey}&language=es-ES&page=1`;
     return fetch(apiURL)
         .then((res) => res.json())
         .then(response=>{
