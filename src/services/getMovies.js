@@ -13,7 +13,7 @@ export default function getMovies ({ keywords = 'top_rated' } = {}) {
             const { id, title, release_date, poster_path, overview } = data;
             return { id, title, release_date, poster_path, overview };
           });
-          console.log(allMovies);
+          // console.log(allMovies);
           return allMovies;
         })
 }
