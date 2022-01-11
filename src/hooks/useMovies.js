@@ -15,7 +15,7 @@ const useMovies = ({ keyword } = { keyword : '' }) => {
         getMoviesSearch({ keyword: keywordToUse }).then( movie => {
             setMovies(movie)
             setLoading(false);
-            localStorage.setItem('lastKeyword', keyword)
+            localStorage.setItem('lastKeyword', keywordToUse)
         })
     }
     // Se ejecuta cada vez que se renderiza el componente
