@@ -20,7 +20,7 @@ const App = () => {
     
         <Route 
           component={Detail}
-          path="/movie/:keyword"
+          path="/movie/:id"
         />
       </section>
     </div>

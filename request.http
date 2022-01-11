@@ -5,3 +5,10 @@ GET https://api.themoviedb.org/3/movie/top_rated?api_key={{key}}&language=es-ES&
 
 ### Buscar pelicula
 GET https://api.themoviedb.org/3/search/movie?api_key=d1995f9cb803e3952498564c2eee810a&language=es-ES&query=daredevil&page=1&include_adult=true
+
+### Buscar pelicula por id
+@movie_id = 299536
+GET https://api.themoviedb.org/3/movie/{{movie_id}}?api_key={{key}}&language=es-ES
+
+### Peliculas similares segun el id
+GET https://api.themoviedb.org/3/movie/{{movie_id}}/similar?api_key={{key}}&language=es-ES&page=1
