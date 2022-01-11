@@ -18,7 +18,7 @@ const Home = () => {
         setKeyword(e.target.value)
     }
 
-    const {loading, movies} = useMovies({ keyword : 'popular' })
+    const {loading, movies} = useMovies()
 
     return (
         <>
@@ -36,6 +36,7 @@ const Home = () => {
                 Estrenos 2022
             </Link>
 
+            <h1>Ultima busqueda</h1>
             { loading ? <Spinner/> : <ListOfMovies movies={movies}/>}
         </>
     )

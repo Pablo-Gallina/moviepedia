@@ -1,6 +1,6 @@
 const apiKey = 'd1995f9cb803e3952498564c2eee810a'
 
-export default function getMoviesSearch ({ keyword = 'top_rated' } = {}) {
+export default function getMoviesSearch ({ keyword = 'random' } = {}) {
     const apiURL = `https://api.themoviedb.org/3/search/movie/?api_key=${apiKey}&language=es-ES&query=${keyword}&page=1&include_adult=false`;
     return fetch(apiURL)
         .then((res) => res.json())
