@@ -1,6 +1,3 @@
-import { useEffect, useState } from "react";
-
-import getMovies from '../services/getMovies';
 import MovieCard from "./Card/MovieCard";
 
 const ListOfMovies = ({movies}) => {
