@@ -1,24 +1,26 @@
-import { Link, Route } from "wouter";
+import { Route } from "wouter";
 
-import ListOfMovies from "./components/ListOfMovies";
+import Detail from "./pages/Detail/index";
+import SearchResults from "./pages/SearchResults/Index";
+import Home from "./pages/Home/index";
 
 const App = () => {
   return ( 
     <div>
       <section>
-        <Link to="/movies/top_rated">
-          Top Peliculas
-        </Link> <br/>
-        <Link to="/movies/popular">
-          Popular
-        </Link> <br/>
-        <Link to="/movies/upcoming">
-          Estrenos 2022
-        </Link>
+        <Route 
+          component={Home}
+          path="/"
+        />
 
         <Route 
-          component={ListOfMovies}
-          path="/movies/:keyword"
+          component={SearchResults}
+          path="/search/:keyword"
+        />
+    
+        <Route 
+          component={Detail}
+          path="/movie/:keyword"
         />
       </section>
     </div>
