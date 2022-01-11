@@ -1,5 +1,5 @@
 import React from 'react'
-import useDetailMovie from '../../hooks/useDetailMovie'
+import useDetailMovie from 'hooks/useDetailMovie'
 
 const Detail = ({ params }) => {
     const { id } = params;

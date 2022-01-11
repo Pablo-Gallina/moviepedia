@@ -12,3 +12,6 @@ GET https://api.themoviedb.org/3/movie/{{movie_id}}?api_key={{key}}&language=es-
 
 ### Peliculas similares segun el id
 GET https://api.themoviedb.org/3/movie/{{movie_id}}/similar?api_key={{key}}&language=es-ES&page=1
+
+### Get trending movies
+GET https://api.themoviedb.org/3/trending/all/day?api_key={{key}}

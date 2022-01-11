@@ -1,8 +1,8 @@
 import { Route } from "wouter";
 
-import Detail from "./pages/Detail/index";
-import SearchResults from "./pages/SearchResults/Index";
-import Home from "./pages/Home/index";
+import Detail from "pages/Detail/index";
+import SearchResults from "pages/SearchResults/Index";
+import Home from "pages/Home/index";
 
 const App = () => {
   return ( 

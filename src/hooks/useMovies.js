@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react'
-import getMoviesSearch from '../services/getMoviesSearch';
+import getMoviesSearch from 'services/getMoviesSearch';
 
 const useMovies = ({ keyword } = { keyword : '' }) => {
     const [movies, setMovies] = useState([]);

@@ -1,8 +1,8 @@
 import React, { useState } from 'react'
 import { Link, useLocation } from "wouter";
-import ListOfMovies from '../../components/ListOfMovies';
-import Spinner from '../../components/Spinner/Spinner';
-import useMovies from '../../hooks/useMovies';
+import ListOfMovies from 'components/ListOfMovies';
+import Spinner from 'components/Spinner/Spinner';
+import useMovies from 'hooks/useMovies';
 
 const Home = () => {
     const [keyword, setKeyword] = useState('');

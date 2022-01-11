@@ -1,7 +1,7 @@
 import React from 'react'
-import Spinner from '../../components/Spinner/Spinner';
-import ListOfMovies from '../../components/ListOfMovies'
-import useMovies from '../../hooks/useMovies';
+import Spinner from 'components/Spinner/Spinner';
+import ListOfMovies from 'components/ListOfMovies'
+import useMovies from 'hooks/useMovies';
 
 const SearchResults = ({ params }) => {
     const { keyword } = params;
