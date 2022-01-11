@@ -3,6 +3,7 @@ import { Link, useLocation } from "wouter";
 import ListOfMovies from 'components/ListOfMovies';
 import Spinner from 'components/Spinner/Spinner';
 import useMovies from 'hooks/useMovies';
+import TrendingMovies from 'components/TrendingMovies';
 
 const Home = () => {
     const [keyword, setKeyword] = useState('');
@@ -25,19 +26,11 @@ const Home = () => {
             <form onSubmit={handleSubmit}>
                 <input type="text" onChange={handleChange} value={keyword} />
             </form>
-            <h1>Busquedas populares</h1>
-            <Link to="/search/top_rated">
-                Top Peliculas
-            </Link> <br/>
-            <Link to="/search/popular">
-                Popular
-            </Link> <br/>
-            <Link to="/search/upcoming">
-                Estrenos 2022
-            </Link>
 
             <h1>Ultima busqueda</h1>
             { loading ? <Spinner/> : <ListOfMovies movies={movies}/>}
+
+            <TrendingMovies />
         </>
     )
 }
