@@ -4,4 +4,7 @@
 GET https://api.themoviedb.org/3/movie/top_rated?api_key={{key}}&language=es-ES&page=1
 
 ### Buscar pelicula
-GET https://api.themoviedb.org/3/search/movie?api_key=d1995f9cb803e3952498564c2eee810a&language=es-ES&query=daredevil&page=1&include_adult=true
+GET https://api.themoviedb.org/3/search/movie?api_key={{key}}&language=es-ES&query=daredevil&page=1&include_adult=true
+
+### Obtener una pelicula por id
+GET https://api.themoviedb.org/3/movie/24428?api_key={{key}}&language=es-Es
