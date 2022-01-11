@@ -1,6 +1,8 @@
-import useTrengingMovies from 'hooks/useTrengingMovies';
-import React, { useEffect, useRef, useState } from 'react'
+import React from 'react'
 import { Link } from "wouter";
+
+import useNearScreen from 'hooks/useNearScreen';
+import useTrengingMovies from 'hooks/useTrengingMovies';
 
 const TrendingMovies = () => {
     const {trending} = useTrengingMovies();
@@ -19,29 +21,11 @@ const TrendingMovies = () => {
 }
 
 export default function LazyTrending () {
-    const [show, setShow] = useState(false);
-    const lazyTrending = useRef();
     
-    useEffect(() => {
-        const onObserver = (entries) => {
-            console.log(entries);
-            const el = entries[0];
-            console.log(el);
-            // Si el elemento esta en interseccion
-            if (el.isIntersecting) {
-                setShow(true); //Mostrar las trending movies
-            }
-        }
-        //cuando el elemento este a 100px ya hay interseccion con el elemento y entonces se ejecutara el callback onObserver
-        const observer = new IntersectionObserver(onObserver, {
-            rootMargin: '100px'
-        });
+    const {isNearScreen, fromRef } = useNearScreen();
 
-        observer.observe(lazyTrending.current); // Observar el elemento lazyTrending, en su valor actual (current)
-    }, [])
-
-    return <div ref={lazyTrending}>
-        {show ? <TrendingMovies /> : null}
+    return <div ref={fromRef}>
+        {isNearScreen ? <TrendingMovies /> : null}
     </div>
 
 }
