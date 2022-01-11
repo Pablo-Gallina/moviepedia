@@ -1,13 +1,13 @@
 import React, { useEffect, useState } from 'react'
 import getMoviesSearch from '../services/getMoviesSearch';
 
-const useMovies = ({ keyword } = { keyword : 'avengers' }) => {
+const useMovies = ({ keyword } = { keyword : '' }) => {
     const [movies, setMovies] = useState([]);
     // pantalla de cargando
     const [loading, setLoading] = useState(true);
 
     // recuperar la keyword del localStorage
-    const keywordToUse = keyword || localStorage.getItem('lastKeyword') || 'random';
+    const keywordToUse = keyword || localStorage.getItem('lastKeyword') || 'avengers';
 
     // funcion del useEffect
     const cargarDatos = ()=>{
@@ -20,7 +20,7 @@ const useMovies = ({ keyword } = { keyword : 'avengers' }) => {
     }
     // Se ejecuta cada vez que se renderiza el componente
     // Efecto recibe 2 parametros (funcion a ejecutar, y el elemento por el que esperaremos el cambio)
-    useEffect(cargarDatos, [keyword])
+    useEffect(cargarDatos, [keyword, keywordToUse]);
 
     return {loading, movies};
 }
