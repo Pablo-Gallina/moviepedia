@@ -7,10 +7,13 @@ const SearchResults = ({ params }) => {
     const { keyword } = params;
 
     // Custom hook para cargar listar las movies
-    const {loading, movies} = useMovies({ keyword })
+    const {loading, movies, setPage} = useMovies({ keyword })
 
+    const handleNext = () => setPage(prevPage => prevPage + 1);
     return <>
         { loading ? <Spinner/> : <ListOfMovies movies={movies}/>}
+
+        <button onClick={handleNext}>Siguiente pagina</button>
         </>
     
 }

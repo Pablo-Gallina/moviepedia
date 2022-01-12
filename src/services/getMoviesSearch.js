@@ -1,7 +1,7 @@
 import { API_KEY, API_URL} from "./settings";
 
-export default function getMoviesSearch ({ keyword = 'random' } = {}) {
-    const apiURL = `${API_URL}/search/movie/?api_key=${API_KEY}&language=es-ES&query=${keyword}&page=1&include_adult=false`;
+export default function getMoviesSearch ({ keyword = 'random', page = 1 } = {}) {
+    const apiURL = `${API_URL}/search/movie/?api_key=${API_KEY}&language=es-ES&query=${keyword}&page=${page}&include_adult=false`;
     return fetch(apiURL)
         .then((res) => res.json())
         .then(response=>{
