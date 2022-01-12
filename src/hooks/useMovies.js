@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'
+import { useEffect, useState } from 'react'
 import getMoviesSearch from 'services/getMoviesSearch';
 
 const useMovies = ({ keyword } = { keyword : '' }) => {

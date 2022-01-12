@@ -1,10 +1,9 @@
 import React from 'react'
 import { Link } from "wouter";
-
-import useNearScreen from 'hooks/useNearScreen';
 import useTrengingMovies from 'hooks/useTrengingMovies';
 
-const TrendingMovies = () => {
+
+const TrendingSearches = () => {
     const {trending} = useTrengingMovies();
     
     return (
@@ -20,12 +19,4 @@ const TrendingMovies = () => {
     )
 }
 
-export default function LazyTrending () {
-    
-    const {isNearScreen, fromRef } = useNearScreen();
-
-    return <div ref={fromRef}>
-        {isNearScreen ? <TrendingMovies /> : null}
-    </div>
-
-}
+export default TrendingSearches
