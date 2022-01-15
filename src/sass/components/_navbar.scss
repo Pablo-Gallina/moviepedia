@@ -27,13 +27,52 @@
     }
 
     .el-r{
+        display: flex;
+        align-items: center;
+        gap: 25px;
         i{
             font-size: 23px;
             cursor: pointer;
-            margin-right: 30px;
             &:last-child{
                 margin-right: $margenx;
             }
         }
+
+        .search{
+            position: relative;
+            label{
+                position: relative;
+            }
+            i{
+                position: absolute;
+                top: 50%;
+                left: 10px;
+                transform: translate(0, -50%);
+
+            }
+        }
+
+        input[type=text] {
+            border-radius: 8px;
+            height: 40px;
+            width: 30px;
+            opacity: 0;
+            border-style: none;
+            font-size: 1rem;
+            color: $white;
+            cursor:pointer;
+            transition: width .4s ease;
+            &:focus {
+                border-style: none;
+                background: $bg-dark-mid;
+                padding-left: 45px;
+                padding-right: 30px;
+                outline: none;
+                opacity: 1;
+                cursor:text;
+                width: 300px;
+           }
+       }
+
     }
 }
