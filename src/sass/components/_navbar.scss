@@ -1,0 +1,39 @@
+.navbar{
+    /* elementos de posicionamiento */
+    position: fixed;
+    top: 0;
+    /* Flexbox */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+	/* propiedades del box model */
+    min-height: 70px;
+    width: 100%;
+	/* propiedades del texto */
+	/* propiedades visuales (colores, background, bordes, etc...) */
+    border-bottom: 1px solid rgba($color: $white, $alpha: .5);
+	/* resto */
+
+    &.blur{
+        background-color: rgba($color: $bg-dark, $alpha: .3);
+        -webkit-backdrop-filter: blur(5px);
+        backdrop-filter: blur(5px);
+    }
+
+    img{
+        max-height: 55px;
+        margin-left: $margenx;
+        cursor: pointer;
+    }
+
+    .el-r{
+        i{
+            font-size: 23px;
+            cursor: pointer;
+            margin-right: 30px;
+            &:last-child{
+                margin-right: $margenx;
+            }
+        }
+    }
+}

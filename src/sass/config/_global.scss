@@ -4,3 +4,15 @@
 @import "../extra/link";
 
 @import "../components/buttons";
+@import "../components/navbar";
+
+body{
+    background-color: $bg-dark;
+    color: $white;
+    margin-top: 90px;
+}
+
+.px{
+    padding-left: $margenx;
+    padding-right: $margenx;
+}

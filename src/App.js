@@ -3,11 +3,13 @@ import { Route } from "wouter";
 import Detail from "pages/Detail/index";
 import SearchResults from "pages/SearchResults/Index";
 import Home from "pages/Home/index";
+import Navbar from "components/Navbar/Navbar";
 
 const App = () => {
   return ( 
     <div>
-      <section>
+      <Navbar/>
+      <section className="px">
         <Route 
           component={Home}
           path="/"
